@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Add Pet </h1>
+    <form method="post" action="/pets/create">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+      </div>
+
+      <div class="form-group">
+        <select name="type" class="form-control">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="breed" class="form-control">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="lattitude">Lattitude</label>
+        <input type="text" name="lattitude" class="form-control" id="lattitude" placeholder="Lattitude">
+      </div>
+
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input type="text" name="longitude" class="form-control" id="longitude" placeholder="Longitude">
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

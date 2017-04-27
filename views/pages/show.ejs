@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <div class="container">
+    <h1> Pet's Detail </h1>
+    <ul class="list-group">
+      <li class="list-group-item"><%= pet.name %></li>
+      <li class="list-group-item"><%= pet.breed %></li>
+      <li class="list-group-item"><%= pet.type %></li>
+      <% if (wheather == 'cloudy') { %>
+        <li class="list-group-item">Umbrella</li>
+      <% } else { %>
+        <li class="list-group-item"><%= wheather %></li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
