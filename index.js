@@ -58,7 +58,7 @@ app.post('/pets/create', function(request, response) {
     "type": request.body.type,
     "breed": request.body.breed,
     "location": {
-      "coordinates": [request.body.lattitude, request.body.longitude]
+      "coordinates": [(request.body.lattitude || -1), (request.body.longitude || -1)]
     }
   });
 
