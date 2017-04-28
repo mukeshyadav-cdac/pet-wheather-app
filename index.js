@@ -116,9 +116,11 @@ app.get('/pets/:id', function(request, response) {
         res.on('end', function() {
           wheather = JSON.parse(wheather_data);
           console.log(wheather_data);
+
+
           response.render('pages/show', {
             pet: pet.pet,
-            wheather: wheather.currently.icon,
+            wheather: (wheather && wheather.currently && wheather.currently.icon) || (wheather && wheather.error),
             errors: false
           });
         });
@@ -131,7 +133,6 @@ app.get('/pets/:id', function(request, response) {
     })
   });
 });
-
 
 
 app.listen(app.get('port'), function() {
